@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.adroit.nestedrecyclerview.BR
 
 internal open class BindingRecyclerViewAdapter<T : ViewModel>(
-    protected val viewModels: ObservableList<T>, private val viewProvider: ViewProvider,
+    private val viewModels: ObservableList<T>, private val viewProvider: ViewProvider,
     private val binder: ViewModelBinder
 ) : RecyclerView.Adapter<BindingRecyclerViewAdapter.DataBindingViewHolder<ViewDataBinding>>() {
     private val callback: SimpleObservableListCallback<T> = SimpleObservableListCallback(this)
